@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <title>What2Do</title>
+  </head>
+  <body>
+    <div class="w3-container">
+      <h1>Welcome to What2Do</h1>
+      <h6>A tool for deciding on what you should do!</h6>
+    </div>
+    <div class="w3-container">
+      <ul id="toDoList" class="w3-ul w3-center">
+        <li>
+          <h2>
+            <form id="newItemForm">
+              <input
+                id="newItem"
+                type="text"
+                class="w3-input"
+                placeholder="Enter new task..."
+                onfocus="this.value=''"
+              />
+              <button
+                id="submitBtn"
+                type="submit"
+                class="w3-btn w3-black w3-margin-top"
+              >
+                Add
+              </button>
+            </form>
+          </h2>
+        </li>
+      </ul>
+      <div id="displayResult" class="w3-card">
+        <p>Result:</p>
+      </div>
+      <button id="reCalcBtn" class="w3-btn w3-black w3-margin-top">
+        Roll!
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
