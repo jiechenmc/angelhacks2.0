@@ -1,4 +1,4 @@
-const todos = [];
+let todos = [];
 
 const newItemForm = document.getElementById("newItemForm");
 const toDoList = document.getElementById("toDoList");
@@ -23,5 +23,13 @@ reCalcBtn.addEventListener("click", (e) => {
     resultBox.innerText = `You should ${todo}`;
   } else {
     resultBox.innerText = "Please enter at least 1 task";
+  }
+});
+
+toDoList.addEventListener("click", (e) => {
+  if (e.target.nodeName === "LI") {
+    const item = e.target.innerText;
+    toDoList.removeChild(e.target);
+    todos = todos.filter((element) => element !== item);
   }
 });
